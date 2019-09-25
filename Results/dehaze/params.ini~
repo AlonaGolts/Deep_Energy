@@ -1,0 +1,51 @@
+seed = 7
+
+app = dehaze
+
+dehaze_hdf5 = Dehaze.hdf5
+matte_hdf5 = Matte.hdf5
+seg_hdf5 = Seg.hdf5
+
+output_dir = /Results
+
+lr_dehaze = 3e-4
+lr_matte = 0.01
+lr_seg = 0.01
+decay_every = 5                                             
+decay_factor = 0.96                                         
+num_epochs = 3                                              
+batch_size = 32                                             
+;train_schdeule = exp                               
+max_sign_change = 2
+cool_time = 2
+lr_factor = 2
+model_type = conv_skip                                    
+num_reg_conv = 2                                        
+num_net_blocks = 6                                     
+filter_size = 3                                            
+num_filters = 32                                           
+padding_type = None
+epochs_to_checkpoint = 1                                    
+print_iter = 10                                             
+checkpoint_name = my_model                                
+
+power = 2.0                                                 
+seg_lambda_1 = 1.0                                    
+seg_lambda_2 = 1.0                                    
+beta = 1000                                              
+num_neighbors = 4 
+                                        
+matte_lambda_1 = 1.0                                           
+matte_lambda_2 = 1.0  
+matte_win_size = 3
+matte_eps = 1e-5                                          
+
+dehaze_lambda_1 = 1.0                                      
+dehaze_lambda_2 = 1e-4                                     
+dehaze_omega = 0.95                                               
+dehaze_thresh = 0.1                                           
+dehaze_win_size = 15
+dehaze_eps = 1e-6
+
+display_every = 50
+
